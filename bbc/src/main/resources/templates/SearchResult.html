@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="shortcut icon" href="#"/>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+
+
+		<!-- 갤러리 영역 -->
+		<!-- carousel의 방향키를 이용하기 위해 추가 -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="/css/HG_design.css"/>
+
+		<!-- 카테고리 영역 -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Varela+Round">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/css/HG_categoryDiv.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		
+		<!-- 내 설정 -->
+		<link rel="stylesheet" href="/css/HG_mycss.css" />
+		<script type="text/javascript" src="/js/HG_myjavascript.js"></script>
+		
+</head>
+<body>
+
+<div th:replace="header.html :: pageHeader"></div>
+<input type="hidden" th:value="${seqlist}" id="helloworld" ></input>
+
+		<div class="dummy-grid"></div>
+		
+		<div class="category-grid">
+		
+		<div class="row">
+		<div class="col-md-6 col-center">
+			<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
+			<!-- Carousel indicators -->
+			<ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="1"></li>
+				<li data-target="#myCarousel" data-slide-to="2"></li>
+			</ol>   
+			<!-- Wrapper for carousel items -->
+			<div class="carousel-inner">
+				<div class="item active">
+					<div class="row">
+						<div class="col-sm-4">
+							<div class="thumb-wrapper">
+								<div class="img-box">
+									<img src="https://picsum.photos/600/600/?image=10" class="img-responsive" alt="">
+								</div>
+								<div class="thumb-content">
+									<h4>London</h4>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam.</p>
+								</div>						
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="thumb-wrapper">
+								<div class="img-box">
+									<img src="https://picsum.photos/600/600/?image=8" class="img-responsive" alt="">
+								</div>
+								<div class="thumb-content">
+									<h4>New York</h4>
+									<p>Vivamus fermentum in arcu in aliquam. Quisque aliqua porta odio in fringilla vivamus.</p>
+								</div>						
+							</div>
+						</div>				
+						<div class="col-sm-4">
+							<div class="thumb-wrapper">
+								<div class="img-box">
+									<img src="https://picsum.photos/600/600/?image=7" class="img-responsive" alt="">
+								</div>
+								<div class="thumb-content">
+									<h4>Paris</h4>
+									<p>Convallis eget pretium eu, bibendum non leo. Proin susc ipit purus adipiscing dolor.</p>
+								</div>						
+							</div>					
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="row">
+						<div class="col-sm-4">
+							<div class="thumb-wrapper">
+								<div class="img-box">
+									<img src="https://picsum.photos/600/600/?image=6" class="img-responsive" alt="">
+								</div>
+								<div class="thumb-content">
+									<h4>Kuala Lumpur</h4>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam.</p>
+								</div>						
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="thumb-wrapper">
+								<div class="img-box">
+									<img src="https://picsum.photos/600/600/?image=5" class="img-responsive" alt="">
+								</div>
+								<div class="thumb-content">
+									<h4>Agra</h4>
+									<p>Vivamus fermentum in arcu in aliquam. Quisque aliqua porta odio in fringilla vivamus.</p>
+								</div>						
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="thumb-wrapper">
+								<div class="img-box">
+									<img src="https://picsum.photos/600/600/?image=4" class="img-responsive" alt="">
+								</div>
+								<div class="thumb-content">
+									<h4>Dubai</h4>
+									<p>Convallis eget pretium eu, bibendum non leo. Proin susc ipit purus adipiscing dolor.</p>
+								</div>						
+							</div>					
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="row">
+						<div class="col-sm-4">
+							<div class="thumb-wrapper">
+								<div class="img-box">
+									<img src="https://picsum.photos/600/600/?image=3" class="img-responsive" alt="">
+								</div>
+								<div class="thumb-content">
+									<h4>Rio De Janeiro</h4>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam.</p>
+								</div>						
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="thumb-wrapper">
+								<div class="img-box">
+									<img src="https://picsum.photos/600/600/?image=2" class="img-responsive" alt="">
+								</div>
+								<div class="thumb-content">
+									<h4>Giza</h4>
+									<p>Vivamus fermentum in arcu in aliquam. Quisque aliqua porta odio in fringilla vivamus.</p>
+								</div>						
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="thumb-wrapper">
+								<div class="img-box">
+									<img src="https://picsum.photos/600/600/?image=1" class="img-responsive" alt="">
+								</div>
+								<div class="thumb-content">
+									<h4>Sydney</h4>
+									<p>Convallis eget pretium eu, bibendum non leo. Proin susc ipit purus adipiscing dolor.</p>
+								</div>						
+							</div>					
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Carousel controls -->
+			<a class="carousel-control left" href="#myCarousel" data-slide="prev">
+				<i class="fa fa-angle-left"></i>
+			</a>
+			<a class="carousel-control right" href="#myCarousel" data-slide="next">
+				<i class="fa fa-angle-right"></i>
+			</a>
+		</div>
+		</div>
+	</div>
+		
+		</div>
+<!-- ################################################################################################################################################################ -->
+        <div class="result-grid">
+        <div class="row">
+            <div class="col-xs-12">
+                
+                    <div id="gallery">
+                        <div><img src="" id="image1"/><a href="#lightbox-1" id="test1"></a></div>
+                        <div><img src="" id="image2"/><a href="#lightbox-2" id="test2"></a></div>
+                        <div><img src="" id="image3"/><a href="#lightbox-3" id="test3"></a></div>
+                        <div><img src="" id="image4"/><a href="#lightbox-4" id="test4"></a></div>
+                        <div><img src="" id="image5"/><a href="#lightbox-5" id="test5"></a></div>
+                        <div><img src="" id="image6"/><a href="#lightbox-6" id="test6"></a></div>
+                        <div><img src="" id="image7"/><a href="#lightbox-7" id="test7"></a></div>
+                        <div><img src="" id="image8"/><a href="#lightbox-8" id="test8"></a></div>
+                        <div><img src="" id="image9"/><a href="#lightbox-9" id="test9"></a></div>
+                        <div><img src="" id="image10"/><a href="#lightbox-10" id="test10"></a></div>
+                        <div><img src="" id="image11"/><a href="#lightbox-11" id="test11"></a></div>
+                        <div><img src="" id="image12"/><a href="#lightbox-12" id="test12"></a></div>
+                        <div><img src="" id="image13"/><a href="#lightbox-13" id="test13"></a></div>
+                        <div><img src="" id="image14"/><a href="#lightbox-14" id="test14"></a></div>
+                        <div><img src="" id="image15"/><a href="#lightbox-15" id="test15"></a></div>
+                        <div><img src="" id="image16"/><a href="#lightbox-16" id="test16"></a></div>
+                        <div><img src="" id="image17"/><a href="#lightbox-17" id="test17"></a></div>
+                        <div><img src="" id="image18"/><a href="#lightbox-18" id="test18"></a></div>
+                    </div>
+                    
+
+                    <a class="left carousel-control" onclick="goLeft()" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+                    <a class="right carousel-control" onclick="goRight()" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+				</div>
+            </div>
+        </div>
+</body>
+</html>

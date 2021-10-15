@@ -1,0 +1,21 @@
+body {
+	margin: 0;
+	overflow-x: hidden;
+	background: #ebebeb;
+	font-family: "Open Sans", sans-serif;
+}
+a.carousel-control {
+    width: 60px;
+    background: rgba(0,0,0,0);
+}
+.result-grid {
+    height: 100vh;
+    width: 100%;
+}
+
+.category-grid {
+    height: 55vh;
+}
+.dummy-grid{
+	height: 10vh;
+}
