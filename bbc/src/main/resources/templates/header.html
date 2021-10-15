@@ -62,26 +62,47 @@
 	</div>
 
 	<!-- 
-<div style="padding:15px 15px 2500px;font-size:30px;margin-top:30px;">
-  <p><b>This example demonstrates how to hide a navbar when the user starts to scroll the page.</b></p>
-  <p>Scroll down this frame to see the effect!</p>
-  <p>Scroll up to show the navbar.</p>
-  <p>Lorem ipsum dolor dummy text sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  <p>Lorem ipsum dolor dummy text sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+=======
+<html th:fragment="pageHeader">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/css/HG_navbar.css" media="(min-width:600px)">
+<script type="text/javascript" src="/js/HG_navbar.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+<!-- 검색 -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+</head>
+<body>
+
+<div id="navbar">
+  <div>
+    <a class="home" href="#home">Home</a>
+    <a class="category" href="#home">Nation</a>
+    <a class="category" href="#news">Region</a>
+    <a class="category" href="#contact">Place</a>
+
+    <span class="category" hidden></span>
+
+    <input type="text" id="headerInputBox" placeholder="search . . ." onkeyup="enterEvent()">
+    <!-- <i class="fa fa-search" onclick="hello()"></i> -->
+    <a class="my-menu" href="#myMenu">My Menu</a>
+    
+  </div>
 </div>
- -->
+<div id="footSlot">
+  <div id="project-info">
+      <span class="footer-BigText">B B C</span>
+      <span class="footer-SmallText">&nbsp; Bye Bye Covid</span>
+  </div>
 
-	<div id="footSlot">
-		<div id="project-info">
-			<span class="footer-BigText">B B C</span> <span
-				class="footer-SmallText">&nbsp; Bye Bye Covid</span>
-		</div>
+  <div id="member-info">
+      <span class="footer-text">박재명 . 손병일 . 장한결 . 하동욱</span>
+  </div>
+  
+</div>
 
-		<div id="member-info">
-			<span class="footer-text">박재명 . 손병일 . 장한결 . 하동욱</span>
-		</div>
-
-	</div>
 
 </body>
 </html>
