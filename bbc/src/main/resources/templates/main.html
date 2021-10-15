@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+ <title>TravelingMain</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="/js/main.js"></script>
+</head>
+<body>
+    <header th:replace="header.html :: Header">
+    </header>
+    <section>
+      <article id="search">
+        <div id="searchwrap">
+          <form action="search" method="post" name="forms">
+            <input type="text" id="textbox" name ="searching" placeholder="검색어를 입력해주세요."><button id="btn" type="button" onclick="sendSearch()"><i class="fas fa-search"></i></button> 
+        </div>
+        <div id="filtering">
+          <select id="selectnation" name = "nation" class="form-select" aria-label="Default select example">
+			<option selected>Nation</option>
+			<th:block th:each="list : ${nation}">
+			<option th:value="${list}" th:text="${list}"></option>
+ 			</th:block>
+		  </select>
+         <select id="selectregion" name = "region" class="form-select" aria-label="Default select example">
+  			<option selected>Region</option>
+  		 </select>
+         <select id="selectplace" name = "place" class="form-select" aria-label="Default select example">
+ 			<option selected>Place</option>
+		</select>
+      	</div>
+        </form>
+      </article>
+        <article id="trip">
+        <h3>Best Travels</h3>
+          <div id="bestTrip" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+             <th:block class="imageanchor" th:each="list, i : ${bestboardlist}">
+           	  <th:block class="imageanchor" th:if="${i.index == 0}">
+               <div class="carousel-item active" >
+                <a class="imageanchor" th:href="@{detail(board_seq=${list.get('board').board_seq})}"><img th:src="${list.image[0].path}" class="d-block w-100" alt="..." width="70vw" height="300vh"></a>
+                <div class="carousel-caption d-none d-md-block">
+                 <h5 th:text="${list.get('board').title}"></h5>
+                </div>
+               </div>
+              </th:block>
+             <th:block class="imageanchor" th:unless="${i.index == 0}">
+              <div class="carousel-item" >
+                <a class="imageanchor" th:href="@{detail(board_seq=${list.get('board').board_seq})}"><img th:src="${list.image[0].path}" class="d-block w-100" alt="..." width="70vw" height="300vh"></a>
+                <div class="carousel-caption d-none d-md-block">
+                 <h5 th:text="${list.get('board').title}"></h5>
+                </div>
+              </div>
+              </th:block>
+             </th:block>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#bestTrip" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#bestTrip" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </article>   
+        <article id="traveler"> 
+        <h3>New Travels</h3>
+         <div id="newTrip" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+             <th:block class="imageanchor"  th:each="list, i : ${newboardlist}">
+           	  <th:block class="imageanchor" th:if="${i.index == 0}">
+               <div class="carousel-item active" >
+                <a class="imageanchor" th:href="@{detail(board_seq=${list.get('board').board_seq})}"><img th:src="${list.image[0].path}" class="d-block w-100" alt="..." width="70vw" height="300vh"></a>
+                <div class="carousel-caption d-none d-md-block">
+                 <h5 th:text="${list.get('board').title}"></h5>
+                </div>
+               </div>
+              </th:block>
+             <th:block class="imageanchor" th:unless="${i.index == 0}">
+              <div class="carousel-item" >
+                <a class="imageanchor" th:href="@{detail(board_seq=${list.get('board').board_seq})}"><img th:src="${list.image[0].path}" class="d-block w-100" alt="..." width="70vw" height="300vh"></a>
+                <div class="carousel-caption d-none d-md-block">
+                 <h5 th:text="${list.get('board').title}"></h5>
+                </div>
+              </div>
+              </th:block>
+             </th:block>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#newTrip" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#newTrip" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </article>
+    </section>
+    <footer>
+    </footer>
+</body>
+</html>
+
+<!-- th:src="@{/image/}+${list.image[0].rename}"  -->
