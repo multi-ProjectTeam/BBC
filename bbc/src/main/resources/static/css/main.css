@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+ 		body{
+          background-color: #F5F5F5;
+        }
+        section{
+          height: 120vh;
+          display:flex;
+          flex-direction: column;
+          justify-content:space-around;
+          align-items:center;
+        }
+        #footer{
+        	height: 20vh;
+        }
+       #trip, #traveler{
+         width:50%;
+         text-align:center;
+       }
+       #search{
+        width:100%;
+        margin-top: 12vh;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+       }
+       #searchwrap{
+        width:100%;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;;
+       }
+       form{
+         width:100%;
+         height:100%;
+         display:flex;
+         justify-content:center;
+       }
+       #textbox{
+       	background-color:white;
+        width:20%;
+        height:100%;
+        padding: 10px 20px;
+        border: 1px solid lightgray;
+        border-radius: 5px;
+       }
+       #btn{
+         color: rgb(34, 33, 33);
+         padding: 10px 20px;
+         background-color:#c4d3da;
+         border: none;
+         border-radius: 5px;
+       }
+      .btn-group{
+        margin-top:10px;
+      }
+      #filtering{
+      	display:flex;
+      	justify-content: center;
+      	align-items: center;
+      }
+      .form-select{
+      	width: 7.5vw;
+      	margin: 0px;
+      	background-color: gray;
+      	color: white;
+      }
